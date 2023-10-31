@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -9,16 +10,17 @@ import { RouterModule } from '@angular/router';
 export class LoginComponent implements OnInit {
   showSignup: boolean = false;
 
-  showSignupForm() {
-    this.showSignup = true;
-  }
+  form = new FormGroup({
+    username: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required),
+  });
 
-  closeSignupForm() {
-    this.showSignup = false;
-  }
+  constructor() { }
 
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+  ngOnInit(): void { }
+
+  onLogin() {
+    console.log("form", this.form);
   }
 
 }
