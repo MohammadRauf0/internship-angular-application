@@ -3,16 +3,17 @@
   <div class="shape"></div>
 </div>
 
-<form formGroup="form">
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
   <h3>Login Here</h3>
 
   <label for="username">Username</label>
-  <input type="text" placeholder="Email or Username" id="username" formControlName="username" />
+  <input type="text" placeholder="Email or Username" id="username" formControlName="email" />
 
   <label for="password">Password</label>
   <input type="password" placeholder="Password" id="password" formControlName="password" />
 
-  <button class="loginButton" (click)="onLogin()">Log In</button>
+  <button class="loginButton" (click)="onLogin()" [disabled]="!form.valid">Log In</button>
+  <!-- <button type="button" (click)="updateName()">Update Name</button> -->
   <!-- <button type="button" class="signupButton" routerLink="signup">Sign up?</button> -->
 
 </form>

@@ -7,6 +7,8 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import routeConfig from './routes';
 import { provideRouter } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { provideRouter } from '@angular/router';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [provideRouter(routeConfig)],
   bootstrap: [AppComponent]
