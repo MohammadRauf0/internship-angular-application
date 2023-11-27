@@ -7,17 +7,5 @@ import { MatDrawer } from '@angular/material/sidenav';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
-  @ViewChild('drawer') drawer!: MatDrawer;
 
-  openDrawer() {
-    this.drawer.open();
-  }
-
-  closeDrawer() {
-    this.drawer.close();
-  }
-
-  toggleDrawer() {
-    this.drawer.toggle();
-  }
 }

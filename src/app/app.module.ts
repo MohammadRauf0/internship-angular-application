@@ -15,6 +15,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { InstrumentListComponent } from './DashboardComponents/instrument-list/instrument-list.component';
+import { ArtistListComponent } from './DashboardComponents/artist-list/artist-list.component';
+import { BandListComponent } from './DashboardComponents/band-list/band-list.component';
+import { ConcertListComponent } from './DashboardComponents/concert-list/concert-list.component';
+import { ConcertBandListComponent } from './DashboardComponents/concert-band-list/concert-band-list.component';
+import { RoleListComponent } from './DashboardComponents/role-list/role-list.component';
+import { RoleInstrumentListComponent } from './DashboardComponents/role-instrument-list/role-instrument-list.component';
 
 
 @NgModule({
@@ -22,7 +29,14 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     AppComponent,
     LoginComponent,
     SignupComponent,
-    DashboardComponent
+    DashboardComponent,
+    InstrumentListComponent,
+    ArtistListComponent,
+    BandListComponent,
+    ConcertListComponent,
+    ConcertBandListComponent,
+    RoleListComponent,
+    RoleInstrumentListComponent
   ],
   imports: [
     BrowserModule,
