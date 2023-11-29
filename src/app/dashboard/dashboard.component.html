@@ -1,32 +1,54 @@
-<div class="dashboardContainer">
-  <mat-drawer-container
-    [class.drawer-opened]="drawer.opened"
-    class="mat-drawer-container"
-  >
-    <mat-drawer #drawer class="drawer" mode="side" opened="true">
-      <mat-toolbar class="header">
-        <div>Logo</div>
-        <mat-icon class="close" (click)="drawer.close()">close</mat-icon>
-      </mat-toolbar>
-      <div class="contents">Drawer</div>
-    </mat-drawer>
+<mat-drawer-container [class.drawer-opened]="drawer.opened">
+  <mat-drawer #drawer class="drawer" mode="side" opened="true">
 
-    <mat-toolbar class="main header">
-      <mat-icon *ngIf="!drawer.opened" (click)="drawer.toggle()">
-        menu
-      </mat-icon>
-      <div>Header</div>
+    <mat-toolbar class="header">
+      <img src="C:\Users\mdxra\Desktop\Angular_full_color_logo.svg.png" alt="LoGo">
+      <mat-icon class="close" (click)="drawer.close()">close</mat-icon>
     </mat-toolbar>
-
-    <div class="main contents">
-      drawer opened: {{ drawer.opened }}
-      <div>
-        Contents xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxx
-        xxxxxxx xxxxxx xxxxxx
+    <div class="contents">
+      <div class="p-5">
+        <!-- Drawer begins from here -->
+        <mat-list role="list">
+          <mat-list-item class="!cursor-pointer" role="listitem" routerLink='artistList'>
+            <div class="labelNames">Artists List</div>
+          </mat-list-item>
+          <mat-list-item class="!cursor-pointer" role="listitem" routerLink="bandList">
+            <div class="labelNames">Band List</div>
+          </mat-list-item>
+          <mat-list-item class="!cursor-pointer" role="listitem" routerLink="concertBandList">
+            <div class="labelNames">Concert Band List</div>
+          </mat-list-item>
+          <mat-list-item class="!cursor-pointer" role="listitem" routerLink="concertList">
+            <div class="labelNames">Concert List</div>
+          </mat-list-item>
+          <mat-list-item class="!cursor-pointer" role="listitem" routerLink="instrumentList">
+            <div class="labelNames">Instrument List</div>
+          </mat-list-item>
+          <mat-list-item class="!cursor-pointer" role="listitem" routerLink="roleInstrumentList">
+            <div class="labelNames">Role Instrument List</div>
+          </mat-list-item>
+          <mat-list-item class="!cursor-pointer" role="listitem" routerLink="roleList">
+            <div class="labelNames">Role List</div>
+          </mat-list-item>
+        </mat-list>
       </div>
-      <div style="height: 1000px">&nbsp;</div>
     </div>
+  </mat-drawer>
 
-    <mat-toolbar class="main footer"> Footer </mat-toolbar>
-  </mat-drawer-container>
-</div>
+  <mat-toolbar class="main header">
+    <mat-icon *ngIf="!drawer.opened" (click)="drawer.toggle()">
+      menu
+    </mat-icon>
+    <div>Musician</div>
+  </mat-toolbar>
+
+  <div class="main contents">
+    <div class="mt">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+  <mat-toolbar class="main footer">
+    Copyright © 2023 MohammadRauf - All rights reserved
+  </mat-toolbar>
+</mat-drawer-container>

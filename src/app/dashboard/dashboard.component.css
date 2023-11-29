@@ -1,19 +1,20 @@
-.dashboardContainer{
-  padding-top : 50px;
+*{
+  text-shadow: none;
 }
-
 .drawer {
+  position: absolute;
   height: 100vh;
-  min-width: 25%;
+  min-width: 10%;
   border-right: 1px solid #ccc;
 }
 .drawer .header {
+  position: absolute;
   right: 0;
   justify-content: space-between;
-  font-size: 30px;
 }
 .drawer .contents {
   padding: 16px;
+  margin-top: 60px;
 }
 
 .main {
@@ -21,7 +22,7 @@
 }
 
 .main.header {
-  font-size: 30px;
+  position: absolute;
   top: 0;
   width: 100%;
   z-index: 2;
@@ -30,14 +31,18 @@
 
 .main.contents {
   min-height: 100vh;
-  margin-top: 15px; /* height of header */
-  padding: 10px;
+  margin-top: 64px; 
+  padding: 16px;
 }
 
 .main.footer {
-  font-size: 30px;
   position: fixed;
   border-top: 1px solid #ccc;
   bottom: 0;
   width: 100%;
 }
+
+.c-pointer {
+  cursor: pointer !important;
+}
+

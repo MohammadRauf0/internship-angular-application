@@ -15,6 +15,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
 import { InstrumentListComponent } from './DashboardComponents/instrument-list/instrument-list.component';
 import { ArtistListComponent } from './DashboardComponents/artist-list/artist-list.component';
 import { BandListComponent } from './DashboardComponents/band-list/band-list.component';
@@ -47,7 +48,8 @@ import { RoleInstrumentListComponent } from './DashboardComponents/role-instrume
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [provideRouter(routeConfig)],
   bootstrap: [AppComponent]
