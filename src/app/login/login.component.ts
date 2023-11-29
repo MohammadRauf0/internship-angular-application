@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
   form = new FormGroup({
@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
     this.authService.onLogin(formData).subscribe((res: any) => {
       console.log('res', res);
       localStorage.setItem(this.AUTH_LOCAL_STORAGE_TOKEN, res.token);
-      this.route.navigateByUrl('dashboard');
+      this.route.navigateByUrl('home');
     });
     console.log('form', this.form);
     console.log(this.form.status);

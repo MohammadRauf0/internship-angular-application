@@ -14,8 +14,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatListModule} from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 import { InstrumentListComponent } from './DashboardComponents/instrument-list/instrument-list.component';
 import { ArtistListComponent } from './DashboardComponents/artist-list/artist-list.component';
 import { BandListComponent } from './DashboardComponents/band-list/band-list.component';
@@ -23,6 +23,7 @@ import { ConcertListComponent } from './DashboardComponents/concert-list/concert
 import { ConcertBandListComponent } from './DashboardComponents/concert-band-list/concert-band-list.component';
 import { RoleListComponent } from './DashboardComponents/role-list/role-list.component';
 import { RoleInstrumentListComponent } from './DashboardComponents/role-instrument-list/role-instrument-list.component';
+import { HomePageComponent } from './DashboardComponents/home-page/home-page.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { RoleInstrumentListComponent } from './DashboardComponents/role-instrume
     ConcertListComponent,
     ConcertBandListComponent,
     RoleListComponent,
-    RoleInstrumentListComponent
+    RoleInstrumentListComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
